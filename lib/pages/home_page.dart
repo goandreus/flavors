@@ -8,11 +8,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: AppConfig.instance.primaryColor,
       ),
       body: Container(
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(AppConfig.instance.apiHost)
           ],
