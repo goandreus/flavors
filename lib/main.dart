@@ -1,21 +1,16 @@
-import 'package:flavors/pages/home_page.dart';
+import 'package:flavors/app_config.dart';
 import 'package:flutter/material.dart';
 
+import 'my_app.dart';
+
 void main() {
-  runApp(MyApp());
+  AppConfig.instance.init(
+    apiHost: 'https:apihost.com', 
+    icon: 'assets/icon/free.png', 
+    primaryColor: Colors.redAccent, 
+    secondaryColor: Colors.white);
+
+    runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomePage(),
-    );
-  }
-}
 
