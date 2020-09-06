@@ -1,3 +1,4 @@
+import 'package:flavors/app_config.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,6 +9,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          children: [
+            Text(AppConfig.instance.apiHost)
+          ],
+        ),
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'my_app.dart';
 
 void main() {
   AppConfig.instance.init(
-    apiHost: 'https:free.apihost.com', 
+    apiHost: 'https://free.apihost.com', 
     icon: 'assets/icon/free.png', 
     primaryColor: Colors.blue, 
     secondaryColor: Colors.white);
