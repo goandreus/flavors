@@ -1,3 +1,4 @@
+import 'package:flavors/api/account_api.dart';
 import 'package:flavors/app_config.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,16 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(AppConfig.instance.apiHost)
+            Text(AppConfig.instance.apiHost),
+            SizedBox(
+              height: 20,
+            ),
+            FlatButton(
+              onPressed: (){
+                final host = AccountAPI.getHost();
+                print('Host $host');
+              }, 
+              child: Text('Get Host')),
           ],
         ),
       ),
