@@ -13,6 +13,11 @@ class AppConfig{
   static final AppConfig _instance = AppConfig._internal();
   static AppConfig get instance => _instance;
 
+  String get apiHost => _apiHost;
+  String get icon => _icon;
+  Color get primaryColor => _primaryColor;
+  Color get secondaryColor => _secondaryColor;
+
   void init ({
     @required String apiHost,
     @required String icon,
